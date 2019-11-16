@@ -399,7 +399,7 @@ namespace Game_Ludo
             int x = 0;
             // x = Convert.ToInt32(Console.ReadLine().ToString()); //choice of token
             while ((!int.TryParse(Console.ReadLine(), out x)) || (x >= 5) || (x < 1))
-                x = Convert.ToInt32(Console.ReadLine().ToString());
+                Console.WriteLine("Sorry that is not a valid input");
             
             Token ptrToken = players[playerTurn].GetToken[x - 1]; //Pointer to make code less long
             
