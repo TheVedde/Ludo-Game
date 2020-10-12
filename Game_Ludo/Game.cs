@@ -37,7 +37,7 @@ namespace Game_Ludo
             Turn();
         }
        
-        // This class allows text to be written out letter by letter with spaces inbetween, for added effect.
+        // This class allows text to be written out letter by letter with spaces in between, for added effect.
         public void SlowPrint(string text, int time = 100)
         {
             text.ToCharArray();
@@ -425,7 +425,7 @@ namespace Game_Ludo
 
                     Fields[ptrToken.TokenPosition + die.GetValue()].Occupy(ptrToken);
 
-                    if (ptrToken.Getcolor() == GameColor.Red)
+                    if (ptrToken.GetColor() == GameColor.Red)
                     {
                         if (ptrToken.TokenPosition >= ptrToken.GetEndZonePos())
                         {
@@ -461,10 +461,8 @@ namespace Game_Ludo
                         ptrToken.TokenPosition = 6;
                     }
 
-                    else 
-                    InnerFields[ptrToken.TokenPosition + die.GetValue()].Occupy(ptrToken);
-      
-                break;
+                    else InnerFields[ptrToken.TokenPosition + die.GetValue()].Occupy(ptrToken);
+                    break;
             }
         } 
 

@@ -60,6 +60,8 @@
   <ItemGroup>
     <Compile Include="Field.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="Interfaces\IDie.cs" />
+    <Compile Include="Interfaces\IToken.cs" />
     <Compile Include="LudoDice.cs" />
     <Compile Include="PlayerSelect.cs" />
     <Compile Include="Program.cs" />

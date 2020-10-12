@@ -3,25 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Game_Ludo.Interfaces;
 
 namespace Game_Ludo
 {
-    public class LudoDice
+    public class LudoDice : IDie
     {
-        private Random rand = new Random();
-
-        private int diceValue;
-
+        private readonly Random rand = new Random();
         public LudoDice()
         {
-            this.ThrowDice();
+            ThrowDice();
         }
 
         public int ThrowDice()
         {
-            this.diceValue = rand.Next(1, 7);
-            return this.diceValue;
+            DieValue = rand.Next(1, 7);
+            return DieValue;
         }
-        public int GetValue()=> diceValue;
+
+        public int DieValue { get; private set; }
+        public int GetValue()=> DieValue;
     }
 }

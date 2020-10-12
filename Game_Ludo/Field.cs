@@ -62,15 +62,15 @@ namespace Game_Ludo
         private void KillEnemy()
         {
 
-            if (Occupants[0].Getcolor() != Occupants[1].Getcolor())
+            if (Occupants[0].GetColor() != Occupants[1].GetColor())
             {
-                if (Occupants[0].Getcolor() != FieldColor)
+                if (Occupants[0].GetColor() != FieldColor)
                 {
                     Occupants[0].TokenState = TokenState.Home;
                     Occupants[0].TokenPosition = 0;
                 }
 
-                else if (Occupants[0].Getcolor() == FieldColor)
+                else if (Occupants[0].GetColor() == FieldColor)
                 {
                     Occupants[1].TokenState = TokenState.Home;
                     Occupants[1].TokenPosition = 0;

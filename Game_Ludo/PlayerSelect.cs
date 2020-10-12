@@ -16,7 +16,7 @@ namespace Game_Ludo
         {
             this.Name = PlayerName;
             this.tokens = tokens;
-            this.GetColor = this.tokens[0].Getcolor();
+            this.GetColor = this.tokens[0].GetColor();
             this.PlayerID = id;
         }
         public string GetName => Name;
